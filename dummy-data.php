@@ -11,6 +11,7 @@
 require_once(ABSPATH . 'wp-config.php'); 
 require_once(ABSPATH . 'wp-includes/wp-db.php'); 
 require_once(ABSPATH . 'wp-admin/includes/taxonomy.php'); 
+include 'inc/setting.php';
 
 function import_data_register_settings() {
 	add_option( 'import_data_option_name', 'This is my option value.');
@@ -21,3 +22,10 @@ function import_data_register_options_page() {
 	add_options_page('Page Title', 'Import Dummy', 'manage_options', 'import_data', 'import_data_options_page');
 }
 add_action('admin_menu', 'import_data_register_options_page');
+?>
+
+<!-- Import Dummy Data -->
+<?php
+function import_dummy_data(){
+
+}
